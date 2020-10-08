@@ -4,7 +4,7 @@
     <header class="flex items-center mb-6 pb-4">
         <div class="flex justify-between items-end w-full">
             <p class="text-muted font-light">
-                <a href="/projects" class="text-muted no-underline hover:underline">My Projects</a>
+                <a href="/projects" class="text-green-600 no-underline ">My Projects</a>
                 / {{ $project->title }}
             </p>
 
@@ -40,7 +40,7 @@
                                 @csrf
 
                                 <div class="flex items-center">
-                                    <input name="body" value="{{ $task->body }}" class="text-default bg-card w-full {{ $task->completed ? 'line-through text-muted' : '' }}">
+                                    <input name="body" value="{{ $task->body }}" class="text-default bg-card w-full {{ $task->completed ? 'line-through ' : '' }}">
                                     <input name="completed" type="checkbox" onChange="this.form.submit()" {{ $task->completed ? 'checked' : '' }}>
                                 </div>
                             </form>
@@ -76,11 +76,16 @@
 
                     @include ('errors')
                 </div>
+
+                <div>
+                    <h2 class="font-light mt-4 text-green-700">Updates</h2>
+                        @include ('projects.activity.card')
+                    
+                </div>
             </div>
 
             <div class="lg:w-1/4 px-3 lg:py-8">
                 @include ('projects.card')
-                @include ('projects.activity.card')
 
                 @can ('manage', $project)
                     @include ('projects.invite')

@@ -3,7 +3,7 @@
 @section('content')
     <header class="flex items-center mb-3 pb-4">
         <div class="flex justify-between items-end w-full">
-            <h2 class="text-muted text-base font-light">My Projects</h2>
+            <h2 class="text-green-600 text-base font-light">My Projects</h2>
 
             <a href="/projects/create" class="button" @click.prevent="$modal.show('new-project')">New Project</a>
         </div>

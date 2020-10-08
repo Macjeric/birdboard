@@ -14,17 +14,19 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group row">
+
+                            <div class="control">
+                                <input
+                                        type="email"
+                                        class="input bg-transparent border border-muted-light rounded p-2 text-xs w-full"
+                                        name="email"
+                                        value="{{ $email ?? old('email') }}" 
+                                        required
+                                        >
+                            </div>
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $email ?? old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                            
                         </div>
 
                         <div class="form-group row">

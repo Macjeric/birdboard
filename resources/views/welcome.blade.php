@@ -81,11 +81,11 @@
 
             <div class="content">
                 <div class="title">
-                    Birdboard
+                    Reneal
                 </div>
 
                 <div class="links">
-                    <a href="https://laracasts.com/series/build-a-laravel-app-with-tdd">Watch the Laracasts</a>
+                    <a href="https://reneal.org">Go to the Site</a>
                 </div>
             </div>
         </div>
